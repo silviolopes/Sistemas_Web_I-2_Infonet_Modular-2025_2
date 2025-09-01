@@ -12,6 +12,5 @@ public class EscolaController {
     @GetMapping
     public String index(Model model) {
         return "index";
-
     }
 }
