@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sistema Escola</title>
+     <link rel="stylesheet" th:href="@{/css/estilo.css}">
 </head>
 <body>
-    <h1 style="text-align: center;">Sistema Escolar</h1>
-    <h3 style="text-align: center;"><a href="/alunos/listar">Gerenciar Alunos</a></h3>
+    <h1 style="text-align: center;">Sistema Escola</h1>
+    <div style="text-align: center; background-color: white;">
+        <a th:href="@{/alunos/listar}"><img th:src="@{/images/alunos.png}" style="height:100px; width:100px;"></a>
+    </div>
 </body>
 </html>
