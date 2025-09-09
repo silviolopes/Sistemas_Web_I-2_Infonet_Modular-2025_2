@@ -65,3 +65,10 @@ h1 {
   border-bottom: 2px solid #4CAF50; /* mesma cor do botão Salvar */
   font-family: Arial, sans-serif;
 }
+
+.container{
+
+  width: 500px;
+  margin: auto;
+
+}
