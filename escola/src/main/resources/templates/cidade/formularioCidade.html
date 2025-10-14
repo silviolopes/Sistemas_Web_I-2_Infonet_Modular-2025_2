@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Alunos</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+</head>
+<body>
+    <h1>Cadastro de Cidades</h1>
+    <div class="container">
+    <form th:action="@{/cidades/salvar}" method="post" th:object="${cidade}">
+      
+        <input type="hidden" name="idCidade" th:field="*{idCidade}" readonly />
+
+        <label for="nomeCidade">Nome:</label>
+        <input type="text" name="nomeCidade" th:field="*{nomeCidade}" />
+        <br />
+        <input type="submit" name="salvar" value="Salvar">
+    </form>
+    </div>
+</body>
+</html>

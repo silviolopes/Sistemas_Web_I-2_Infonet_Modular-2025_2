@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Escola</title>
+    <link rel="stylesheet" th:href="@{/css/estilo.css}">
+</head>
+<body>
+    <h1 style="text-align: center;">Sistema Escola</h1>
+    <h3 style="text-align: center;">
+        <a th:href="@{/cidades/criar}">
+            <img th:src="@{/images/inserir.png}">
+        </a>
+    </h3>
+    <!-- Tabela para exibir os alunos cadastrados -->
+    <table style="margin: 0 auto; border: 1px solid black; border-collapse: collapse;">
+        <table style="margin: 0 auto;">
+        <tr>
+            <th colspan="8" style="text-align: center;">Lista de Cidades</th>
+        </tr>
+        <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th colspan="2">Ações</th>
+        </tr>
+        <tr th:each="cidade : ${cidades}">
+            <td th:text="${cidade.idCidade}"></td>
+            <td th:text="${cidade.nomeCidade}"></td>
+            <td><a th:href="@{/cidades/editar/{id}(id=${cidade.idCidade})}"><img th:src="@{/images/editar.png}" style="height: 30px; width: 30px;"></a>
+                 <a th:href="@{/cidades/excluir/{id}(id=${cidade.idCidade})}"><img th:src="@{/images/excluir.png}" style="height: 30px; width: 30px;"></a>
+            </td>
+        </tr>
+    </table>
+    <p style="text-align: center;">
+        <a th:href="@{/escola}">
+            <img th:src="@{/images/voltar.png}">
+        </a>
+    </p>
+</body>
+</html>

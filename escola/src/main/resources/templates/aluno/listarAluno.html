@@ -17,7 +17,7 @@
     <table style="margin: 0 auto; border: 1px solid black; border-collapse: collapse;">
         <table style="margin: 0 auto;">
         <tr>
-            <th colspan="8" style="text-align: center;">Lista de Alunos</th>
+            <th colspan="9" style="text-align: center;">Lista de Alunos</th>
         </tr>
         <tr>
             <th>#</th>
@@ -27,6 +27,7 @@
             <th>RM</th>
             <th>CPF</th>
             <th>Curso</th>
+            <th>Cidade</th>
             <th colspan="2">Ações</th>
         </tr>
         <tr th:each="aluno : ${alunos}">
@@ -37,6 +38,7 @@
             <td th:text="${aluno.rmAluno}"></td>
             <td th:text="${aluno.cpfAluno}"></td>
             <td th:text="${aluno.curso.nomeCurso}"></td>
+            <td th:text="${aluno.cidade.nomeCidade}"></td>
              <td><a th:href="@{/alunos/editar/{id}(id=${aluno.idAluno})}"><img th:src="@{/images/editar.png}" style="height: 30px; width: 30px;"></a>
                  <a th:href="@{/alunos/excluir/{id}(id=${aluno.idAluno})}"><img th:src="@{/images/excluir.png}" style="height: 30px; width: 30px;"></a>
             </td>

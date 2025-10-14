@@ -8,8 +8,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.projetoescola.escola.entity.Aluno;
+import br.com.projetoescola.escola.entity.Cidade;
 import br.com.projetoescola.escola.entity.Curso;
 import br.com.projetoescola.escola.service.AlunoService;
+import br.com.projetoescola.escola.service.CidadeService;
 import br.com.projetoescola.escola.service.CursoService;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,6 +32,10 @@ public class AlunoController {
     @Autowired 
     private CursoService cursoService;
 
+    @Autowired 
+    private CidadeService cidadeService;
+
+
     //Método para salvar um aluno
     @PostMapping("/salvar")
     public String salvar(@ModelAttribute Aluno aluno) {
@@ -49,6 +55,8 @@ public class AlunoController {
         model.addAttribute("aluno", new Aluno());
         List<Curso> cursos = cursoService.findAll();
         model.addAttribute("cursos", cursos);
+        List<Cidade> cidades = cidadeService.findAll();
+        model.addAttribute("cidades", cidades);
         return "aluno/formularioAluno";
     }
 
@@ -66,6 +74,10 @@ public class AlunoController {
         model.addAttribute("aluno", aluno);
         List<Curso> cursos = cursoService.findAll();
         model.addAttribute("cursos", cursos);
+        List<Cidade> cidades = cidadeService.findAll();
+        model.addAttribute("cidades", cidades);
+
+        
         return "aluno/formularioAluno";
     }
     

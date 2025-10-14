@@ -43,4 +43,8 @@ public class Aluno{
     @JoinColumn(name = "idCurso_fk")
     private Curso curso;
 
+    @ManyToOne
+    @JoinColumn(name = "idCidade_fk")
+    private Cidade cidade;
+
 }

@@ -35,6 +35,13 @@
                     th:value="${curso.idCurso}"></option>
         </select>
         <br />
+        <label for="idCidade">Cidade:</label>
+        <select th:field="*{cidade}">
+            <option th:each="cidade : ${cidades}"
+                    th:text="${cidade.nomeCidade}"
+                    th:value="${cidade.idCidade}"></option>
+        </select>
+        <br />
         <input type="submit" name="salvar" value="Salvar">
     </form>
     </div>
