@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import br.com.projetoescola.escola.dto.AlunoTelefone;
 import br.com.projetoescola.escola.entity.Aluno;
 import br.com.projetoescola.escola.repository.AlunoRepository;
 
@@ -33,6 +34,11 @@ public class AlunoService {
     //Método para buscar o aluno pelo ID
     public Aluno findById(Integer id){
         return alunoRepository.findById(id).orElse(null);
+    }
+
+    //Método para buscar o nome e telefone dos alunos
+    public List<AlunoTelefone> buscarNomeTelefone(){
+        return alunoRepository.buscarNomeTelefone();
     }
 
     
