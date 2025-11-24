@@ -20,7 +20,5 @@ public class AlunoTelefone {
     public String getTelefoneAluno() {
         return telefoneAluno;
     }
-
-    
     
 }

@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.projetoescola.escola.dto.AlunoTelefone;
+import br.com.projetoescola.escola.dto.AlunoCurso;
 import br.com.projetoescola.escola.entity.Aluno;
 import br.com.projetoescola.escola.entity.Cidade;
 import br.com.projetoescola.escola.entity.Curso;
@@ -88,6 +89,15 @@ public class AlunoController {
         model.addAttribute("alunos", alunos);
         return "aluno/listaNomeTelefone";
     }
+
+    //Método para listar nome e cursos dos alunos(DTO)
+    @GetMapping("/listar-nome-curso")
+    public String listarNomeCurso(Model model) {
+        List<AlunoCurso> alunos = alunoService.buscarNomeCurso();
+        model.addAttribute("alunos", alunos);
+        return "aluno/listaNomeCurso";
+    }
+
     
     
     

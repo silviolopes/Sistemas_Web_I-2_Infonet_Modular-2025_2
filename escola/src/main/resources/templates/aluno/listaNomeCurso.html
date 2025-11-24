@@ -10,15 +10,15 @@
     <h1 style="text-align: center;">Sistema Escola</h1>
     <table style="width: 50%; margin: auto;">
         <tr>
-            <th colspan="2" style="text-align: center;">Alunos e telefones</th>
+            <th colspan="2" style="text-align: center;">Alunos e cursos</th>
         </tr>
         <tr>
             <th>Nome</th>
-            <th>Telefone</th>
+            <th>Curso</th>
         </tr>
         <tr th:each="aluno : ${alunos}">
             <td th:text="${aluno.nomeAluno}"></td>
-            <td th:text="${aluno.telefoneAluno}"></td>
+            <td th:text="${aluno.nomeCurso}"></td>
         </tr>
     </table>
         <p style="text-align: center;">
