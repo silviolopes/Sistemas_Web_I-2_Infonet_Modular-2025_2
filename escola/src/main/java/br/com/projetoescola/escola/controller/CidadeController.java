@@ -32,7 +32,8 @@ public class CidadeController {
         cidadeService.save(cidade);
         return "redirect:/cidades/listar";
     }
-   
+
+    // Metodo para listar uma cidade
     @GetMapping("/listar")
     public String listar(Model model){
         List<Cidade> cidades = cidadeService.findAll();
